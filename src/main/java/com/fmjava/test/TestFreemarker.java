@@ -6,10 +6,7 @@ import freemarker.template.Template;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.Writer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class TestFreemarker {
 /*第一步：创建一个 Configuration 对象，直接 new 一个对象。构造方法的参数就是 freemarker的版本号。
@@ -36,6 +33,9 @@ public static void main(String[] args) throws Exception{
     map.put("name","赵公子");
     map.put("message","message");
     map.put("goodList",goodList);
+    map.put("today",new Date());
+    map.put("birthday",19970805);
+    map.put("value",null);
     //创建werite对象
     FileWriter writer = new FileWriter("E:\\test.html");
         //输出
